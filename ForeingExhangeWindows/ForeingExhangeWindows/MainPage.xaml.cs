@@ -23,7 +23,10 @@ namespace ForeingExhangeWindows
                 return;
             }
 
-            var pesos = decimal.Parse(PesosEntry.Text);
+            //var pesos = decimal.Parse(PesosEntry.Text);
+
+            decimal pesos = 0;
+            decimal.TryParse(PesosEntry.Text, out pesos);
 
             var dollars = pesos / 2994.01198M;
             var euros = pesos / 3518.11377M;
